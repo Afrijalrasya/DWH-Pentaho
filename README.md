@@ -86,15 +86,6 @@ ETL pipeline ini dibuat untuk memproses data Superstore (CSV/Excel) menggunakan 
 
 ---
 
-## 📦 Dataset yang Digunakan
-
-- Superstore Sales (Orders.csv)
-- Format: Excel/CSV
-- Kolom utama:
-  - Row ID, Order Date, Product, Customer, Sales, Profit, Customer Segment, Region, Ship Date, dsb.
-
----
-
 ## 🧠 Tujuan Pembelajaran
 
 ✅ Memahami alur ETL modern  
