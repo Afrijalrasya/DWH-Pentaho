@@ -15,23 +15,39 @@ ETL pipeline ini dibuat untuk memproses data Superstore (CSV/Excel) menggunakan 
 ---
 
 ## 📂 Struktur Direktori
-
-├── README.md
-├── Data-Source/
-│ ├── Superstore+Sales.csv
+📁 ETL-Superstore/
 │
-├── transformations/
-│ ├── ORDER_STG.ktr
-│ ├── PRODUCTS_STG.ktr
-│ ├── CUSTOMERS_STG.ktr
-│ ├── VALUES_STG.ktr
-│ ├── ORDERS_DIM.ktr
-│ ├── PRODUCTS_DIM.ktr
-│ ├── CUSTOMERS_DIM.ktr
-│ ├── PRE_FACT.ktr
-│ ├── FACT_TABLE.ktr
-│ ├── MONDRIAN_CLEAR_CACHE.ktr
-│ └── CDA_CLEAR_CACHE.ktr
+├── 📁 data_source/                
+│   └── Superstore+Sales.csv
+│
+├── 📁 docs/                      ← Dokumentasi & diagram visual
+│   ├── dashboard.png
+│   ├── process_detail.png
+│
+├── 📁 kettle/                    ← Seluruh file Kettle ETL
+│   ├── 📁 stages/                ← Bronze Layer (staging)
+│   │   ├── customer_stg.ktr
+│   │   ├── product_stg.ktr
+│   │   ├── order_stg.ktr
+│   │   └── values_stg.ktr
+│   │
+│   ├── 📁 dimension/             ← Silver Layer (dimensi)
+│   │   ├── customers_dim.ktr
+│   │   ├── products_dim.ktr
+│   │   ├── orders_dim.ktr
+│   │   └── dim_date.ktr
+│   │
+│   ├── 📁 fact/                  ← Gold Layer (fact)
+│   │   ├── pre_fact.ktr
+│   │   ├── fact_table.ktr
+│   │
+│   └── 📁 job/                   ← Master ETL job
+│       └── ETL-superstore.kjb
+│
+├── 📁 visualization/            ← Dashboard files (Tableau / Power BI / CDE)
+│   ├── dw sales visualisation.pbix
+│
+└── 📄 README.md                 ← Dokumentasi utama proyek
 
 
 
