@@ -105,10 +105,11 @@ ETL pipeline ini dibuat untuk memproses data Superstore (CSV/Excel) menggunakan 
 ---
 
 ## 🧰 Tools
-
-- 🛠️ [Pentaho Data Integration (Kettle)](https://sourceforge.net/projects/pentaho/)
-- 🗃️ PostgreSQL 
-- 📊 Power BI (opsional)
+<p align="center">
+  <img src="https://img.shields.io/badge/PostgreSQL-316192?style=for-the-badge&logo=postgresql&logoColor=white" alt="PostgreSQL" />
+  <img src="https://img.shields.io/badge/Pentaho-0D233F?style=for-the-badge&logo=apache&logoColor=white" alt="Pentaho PDI" />
+  <img src="https://img.shields.io/badge/Power%20BI-F2C811?style=for-the-badge&logo=powerbi&logoColor=black" alt="Power BI" />
+</p>
 
 ---
 
