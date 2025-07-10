@@ -9,6 +9,7 @@ ETL pipeline ini dibuat untuk memproses data Superstore (CSV/Excel) menggunakan 
 +-------------+ +--------------+ +---------------+
 
 | Sources | --> | Bronze Layer | --> | Silver Layer | --> | Gold Layer  | --> | BI Tools
+
 | (CSV Files) | | (Raw Staging)|     |   (Dimensi)  |     |(Fact Table) |     | Power BI
 
 +-------------+ +--------------+ +---------------+
@@ -17,39 +18,39 @@ ETL pipeline ini dibuat untuk memproses data Superstore (CSV/Excel) menggunakan 
 ---
 
 ## 📂 Struktur Direktori
-📁 ETL-Superstore/
-│
-├── 📁 data_source/                
-│   └── Superstore+Sales.csv
-│
-├── 📁 docs/                      ← Dokumentasi & diagram visual
-│   ├── dashboard.png
-│   ├── process_detail.png
-│
-├── 📁 kettle/                    ← Seluruh file Kettle ETL
-│   ├── 📁 stages/                ← Bronze Layer (staging)
-│   │   ├── customer_stg.ktr
-│   │   ├── product_stg.ktr
-│   │   ├── order_stg.ktr
-│   │   └── values_stg.ktr
-│   │
-│   ├── 📁 dimension/             ← Silver Layer (dimensi)
-│   │   ├── customers_dim.ktr
-│   │   ├── products_dim.ktr
-│   │   ├── orders_dim.ktr
-│   │   └── dim_date.ktr
-│   │
-│   ├── 📁 fact/                  ← Gold Layer (fact)
-│   │   ├── pre_fact.ktr
-│   │   ├── fact_table.ktr
-│   │
-│   └── 📁 job/                   ← Master ETL job
-│       └── ETL-superstore.kjb
-│
-├── 📁 visualization/            ← Dashboard files (Tableau / Power BI / CDE)
-│   ├── dw sales visualisation.pbix
-│
-└── 📄 README.md                 ← Dokumentasi utama proyek
+      📁 ETL-Superstore/
+      │
+      ├── 📁 data_source/                
+      │   └── Superstore+Sales.csv
+      │
+      ├── 📁 docs/                      ← Dokumentasi & diagram visual
+      │   ├── dashboard.png
+      │   ├── process_detail.png
+      │
+      ├── 📁 kettle/                    ← Seluruh file Kettle ETL
+      │   ├── 📁 stages/                ← Bronze Layer (staging)
+      │   │   ├── customer_stg.ktr
+      │   │   ├── product_stg.ktr
+      │   │   ├── order_stg.ktr
+      │   │   └── values_stg.ktr
+      │   │
+      │   ├── 📁 dimension/             ← Silver Layer (dimensi)
+      │   │   ├── customers_dim.ktr
+      │   │   ├── products_dim.ktr
+      │   │   ├── orders_dim.ktr
+      │   │   └── dim_date.ktr
+      │   │
+      │   ├── 📁 fact/                  ← Gold Layer (fact)
+      │   │   ├── pre_fact.ktr
+      │   │   ├── fact_table.ktr
+      │   │
+      │   └── 📁 job/                   ← Master ETL job
+      │       └── ETL-superstore.kjb
+      │
+      ├── 📁 visualization/            ← Dashboard files (Tableau / Power BI / CDE)
+      │   ├── dw sales visualisation.pbix
+      │
+      └── 📄 README.md                 ← Dokumentasi utama proyek
 
 
 
