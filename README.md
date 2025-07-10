@@ -8,9 +8,9 @@ ETL pipeline ini dibuat untuk memproses data Superstore (CSV/Excel) menggunakan 
 
 +-------------+ +--------------+ +---------------+
 
-| Sources | --> | Bronze Layer | --> | Silver Layer | --> | Gold Layer  | --> | BI Tools
-
-| (CSV Files) | | (Raw Staging)|     |   (Dimensi)  |     |(Fact Table) |     | Power BI
+            | Sources | --> | Bronze Layer | --> | Silver Layer | --> | Gold Layer  | --> | BI Tools
+            
+            | (CSV Files) | | (Raw Staging)|     |   (Dimensi)  |     |(Fact Table) |     | Power BI
 
 +-------------+ +--------------+ +---------------+
 
