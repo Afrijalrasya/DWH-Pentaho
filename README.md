@@ -71,7 +71,7 @@ ETL pipeline ini dibuat untuk memproses data Superstore (CSV/Excel) menggunakan 
 ### 🟨 Gold Layer – Fact Table (Business-Ready Data)
 - **Transformasi:** PRE_FACT, FACT_TABLE
 - **Tujuan:** Buat fact table siap digunakan untuk analitik
-- **Proses:** Join antar dimensi, hitung metrik (`Sales`, `Profit`), dan clear cache OLAP
+- **Proses:** Join antar dimensi, hitung metrik (`Sales`, `Profit`)
 
 ---
 
