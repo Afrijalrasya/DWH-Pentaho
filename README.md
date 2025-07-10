@@ -7,8 +7,10 @@ ETL pipeline ini dibuat untuk memproses data Superstore (CSV/Excel) menggunakan 
 ## 🧱 Arsitektur yang Digunakan: Medallion Architecture
 
 +-------------+ +--------------+ +---------------+
+
 | Sources | --> | Bronze Layer | --> | Silver Layer | --> | Gold Layer  | --> | BI Tools
-| (CSV Files) | | (Raw Staging)|     |   (Dimensi)  |     |(Fact Table) |     |
+| (CSV Files) | | (Raw Staging)|     |   (Dimensi)  |     |(Fact Table) |     | Power BI
+
 +-------------+ +--------------+ +---------------+
 
 
