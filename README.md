@@ -1,4 +1,4 @@
-# 🏪 ETL Superstore Project (Pentaho Kettle)
+# 🏪 ETL Data modelling Project (Pentaho Kettle)
 
 ETL pipeline ini dibuat untuk memproses data Superstore (CSV/Excel) menjadi model data Star schema menggunakan **Pentaho Data Integration (PDI / Kettle)**. 
 ---
