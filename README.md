@@ -32,7 +32,7 @@ ETL pipeline ini dibuat untuk memproses data Superstore (CSV/Excel) menjadi mode
       │   │   ├── fact_table.ktr
       │   │
       │   └── 📁 job/                   ← Master ETL job
-      │       └── ETL-superstore.kjb
+      │       └── DataWarehouse.kjb
       │
       ├── 📁 visualization/            ← Power BI dashboard
       │   ├── dw sales visualisation.pbix
