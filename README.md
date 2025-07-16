@@ -1,19 +1,7 @@
 # 🏪 ETL Superstore Project (Pentaho Kettle)
 
-ETL pipeline ini dibuat untuk memproses data Superstore (CSV/Excel) menggunakan **Pentaho Data Integration (PDI / Kettle)**. Proyek ini mengimplementasikan **Medallion Architecture** (Bronze, Silver, Gold) untuk memastikan data diolah secara bertahap — dari mentah hingga siap dianalisis.
-
+ETL pipeline ini dibuat untuk memproses data Superstore (CSV/Excel) menjadi model data Star schema menggunakan **Pentaho Data Integration (PDI / Kettle)**. 
 ---
-
-## 🧱 Arsitektur yang Digunakan: Medallion Architecture
-
-+-------------+ +--------------+ +---------------+
-
-            | Sources | --> | Bronze Layer | --> | Silver Layer | --> | Gold Layer  | --> | BI Tools
-            
-            | (CSV Files) | | (Raw Staging)|     |   (Dimensi)  |     |(Fact Table) |     | Power BI
-
-+-------------+ +--------------+ +---------------+
-
 
 ---
 
@@ -28,26 +16,25 @@ ETL pipeline ini dibuat untuk memproses data Superstore (CSV/Excel) menggunakan 
       │   ├── process_detail.png
       │
       ├── 📁 kettle/                    ← Seluruh file Kettle ETL
-      │   ├── 📁 stages/                ← Bronze Layer (staging)
+      │   ├── 📁 stages/               
       │   │   ├── customer_stg.ktr
       │   │   ├── product_stg.ktr
       │   │   ├── order_stg.ktr
       │   │   └── values_stg.ktr
       │   │
-      │   ├── 📁 dimension/             ← Silver Layer (dimensi)
+      │   ├── 📁 dimension/            
       │   │   ├── customers_dim.ktr
       │   │   ├── products_dim.ktr
       │   │   ├── orders_dim.ktr
       │   │   └── dim_date.ktr
       │   │
-      │   ├── 📁 fact/                  ← Gold Layer (fact)
-      │   │   ├── pre_fact.ktr
+      │   ├── 📁 fact/                 
       │   │   ├── fact_table.ktr
       │   │
       │   └── 📁 job/                   ← Master ETL job
       │       └── ETL-superstore.kjb
       │
-      ├── 📁 visualization/            ← Dashboard files (Tableau / Power BI / CDE)
+      ├── 📁 visualization/            ← Power BI dashboard
       │   ├── dw sales visualisation.pbix
       │
       └── 📄 README.md                 ← Dokumentasi utama proyek
@@ -58,19 +45,19 @@ ETL pipeline ini dibuat untuk memproses data Superstore (CSV/Excel) menggunakan 
 
 ## 🔁 Proses ETL
 
-### 🟫 Bronze Layer – Staging (Raw Data)
+### Staging (Raw Data)
 - **Transformasi:** ORDER_STG, PRODUCTS_STG, CUSTOMERS_STG, VALUES_STG
 - **Tujuan:** Menyimpan data mentah (as-is) dari CSV (Superstore+Sales.csv)
 - **Proses:** Full Load, basic cleaning, truncate & insert
 
-### 🪙 Silver Layer – Dimensi (Cleaned & Standardized)
+### Dimensi (Cleaned & Standardized)
 - **Transformasi:** ORDERS_DIM, PRODUCTS_DIM, CUSTOMERS_DIM, DIM_Date
 - **Tujuan:** Menyusun data dimensi terstandarisasi dengan surrogate key
 - **Proses:** Lookup referensi dari VALUES_STG, validasi, enrichment
 
-### 🟨 Gold Layer – Fact Table (Business-Ready Data)
+### Fact Table 
 - **Transformasi:** PRE_FACT, FACT_TABLE
-- **Tujuan:** Buat fact table siap digunakan untuk analitik
+- **Tujuan:** Buat fact table siap yang berisi key reference dari table dimensi
 - **Proses:** Join antar dimensi, hitung metrik (`Sales`, `Profit`)
 
 ---
@@ -88,9 +75,8 @@ ETL pipeline ini dibuat untuk memproses data Superstore (CSV/Excel) menggunakan 
 
 ## 🧠 Tujuan Pembelajaran
 
-✅ Memahami alur ETL modern  
-✅ Membangun data warehouse sederhana  
-✅ Menerapkan Medallion Architecture dengan tool ETL GUI (PDI/Kettle)  
+✅ Memahami alur ETL  
+✅ Membangun mini data warehouse/data mart
 ✅ Dokumentasi pipeline untuk portofolio GitHub
 
 ---
