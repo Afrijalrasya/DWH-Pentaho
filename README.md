@@ -78,6 +78,7 @@ ETL pipeline ini dibuat untuk memproses data Superstore (CSV/Excel) menjadi mode
 ✅ Memahami alur ETL  
 ✅ Membangun mini data warehouse/data mart
 ✅ Dokumentasi pipeline untuk portofolio GitHub
+✅ Membangun dashboard visualisasi
 
 ---
 
