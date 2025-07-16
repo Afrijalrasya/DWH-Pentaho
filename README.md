@@ -34,9 +34,6 @@ ETL pipeline ini dibuat untuk memproses data Superstore (CSV/Excel) menjadi mode
       │   └── 📁 job/                   ← Master ETL job
       │       └── DataWarehouse.kjb
       │
-      ├── 📁 visualization/            ← Power BI dashboard
-      │   ├── dw sales visualisation.pbix
-      │
       └── 📄 README.md                 ← Dokumentasi utama proyek
 
 
