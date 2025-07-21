@@ -60,12 +60,8 @@ Membangun pipeline ETL untuk mengolah data operasional dari data mart dan mengin
 - **Proses:** Join antar dimensi, hitung metrik (`Sales`, `Profit`)
 
 ---
-<h3 align="left">Tools:</h3>
-<p align="left">
-<a><img src="https://img.icons8.com/?size=256&id=38561&format=png" alt="PDI" width="40"> </a> 
-<a><img src="https://www.datageeks.pl/images/Article-images/102-How-to-open-Microsoft-XLSB/pdi.png" alt="PDI" width="40"/></a>
-<a><img src="https://upload.wikimedia.org/wikipedia/commons/c/cf/New_Power_BI_Logo.svg" alt="Power BI" width="40"/></a>
-</p>
+
+
 
 ## 📊 Output
 
@@ -89,7 +85,7 @@ Membangun pipeline ETL untuk mengolah data operasional dari data mart dan mengin
 
 ## 🧰 Tools
 <p align="center">
-  <img src="https://img.shields.io/badge/PostgreSQL-316192?style=for-the-badge&logo=postgresql&logoColor=white" alt="PostgreSQL" />
+  <img src="https://img.icons8.com/?size=256&id=38561&format=png" alt="PDI" width="40">
   <img src="https://www.datageeks.pl/images/Article-images/102-How-to-open-Microsoft-XLSB/pdi.png" alt="Pentaho PDI" width="40" />
   <img src="https://upload.wikimedia.org/wikipedia/commons/c/cf/New_Power_BI_Logo.svg" alt="Power BI" width="40" />
 </p>
