@@ -60,10 +60,9 @@ Membangun pipeline ETL untuk mengolah data operasional dari data mart dan mengin
 
 ## 📊 Output
 
-- `fact_sales` dengan metrik siap analisis
-- Struktur Star Schema
+- Data sales dengan model Star Schema dan siap untuk proses analisis
 - Terintegrasi dengan cache OLAP (Mondrian, CDA)
-- Siap untuk dipakai oleh tools seperti:
+- Siap untuk digunakan untuk visualisasi menggunakan tools seperti:
   - Tableau
   - Power BI
 
