@@ -62,8 +62,8 @@ Membangun pipeline ETL untuk mengolah data operasional dari data mart dan mengin
 ---
 <h3 align="left">Tools:</h3>
 <p align="left">
-<a href="https://www.mysql.com/" target="_blank" rel="noreferrer"> </a> 
-<img src="https://www.datageeks.pl/images/Article-images/102-How-to-open-Microsoft-XLSB/pdi.png" alt="PDI" width="40"/>
+<a><img src="https://img.icons8.com/?size=256&id=38561&format=png" alt="PDI" width="40"> </a> 
+<a><img src="https://www.datageeks.pl/images/Article-images/102-How-to-open-Microsoft-XLSB/pdi.png" alt="PDI" width="40"/></a>
 <a><img src="https://upload.wikimedia.org/wikipedia/commons/c/cf/New_Power_BI_Logo.svg" alt="Power BI" width="40"/></a>
 </p>
 
