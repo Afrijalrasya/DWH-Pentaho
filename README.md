@@ -5,6 +5,23 @@ Membangun pipeline ETL untuk mengolah data operasional dari data mart dan mengin
 
 ---
 
+## 🔁 Proses ETL
+
+### Staging (Raw Data)
+- **Transformasi:** ORDER_STG, PRODUCTS_STG, CUSTOMERS_STG, VALUES_STG
+- **Tujuan:** Menyimpan data mentah (as-is) dari CSV (Superstore+Sales.csv)
+- **Proses:** Full Load, basic cleaning, truncate & insert
+
+### Dimensi (Cleaned & Standardized)
+- **Transformasi:** ORDERS_DIM, PRODUCTS_DIM, CUSTOMERS_DIM, DIM_Date
+- **Tujuan:** Menyusun data dimensi terstandarisasi dengan surrogate key
+- **Proses:** Lookup referensi dari VALUES_STG, validasi, enrichment
+
+### Fact Table 
+- **Transformasi:** PRE_FACT, FACT_TABLE
+- **Tujuan:** Buat fact table siap yang berisi key reference dari table dimensi
+- **Proses:** Join antar dimensi, hitung metrik (`Sales`, `Profit`)
+
 ---
 
 ## 📂 Struktur Direktori
@@ -39,29 +56,7 @@ Membangun pipeline ETL untuk mengolah data operasional dari data mart dan mengin
       └── 📄 README.md                 
 
 
-
 ---
-
-## 🔁 Proses ETL
-
-### Staging (Raw Data)
-- **Transformasi:** ORDER_STG, PRODUCTS_STG, CUSTOMERS_STG, VALUES_STG
-- **Tujuan:** Menyimpan data mentah (as-is) dari CSV (Superstore+Sales.csv)
-- **Proses:** Full Load, basic cleaning, truncate & insert
-
-### Dimensi (Cleaned & Standardized)
-- **Transformasi:** ORDERS_DIM, PRODUCTS_DIM, CUSTOMERS_DIM, DIM_Date
-- **Tujuan:** Menyusun data dimensi terstandarisasi dengan surrogate key
-- **Proses:** Lookup referensi dari VALUES_STG, validasi, enrichment
-
-### Fact Table 
-- **Transformasi:** PRE_FACT, FACT_TABLE
-- **Tujuan:** Buat fact table siap yang berisi key reference dari table dimensi
-- **Proses:** Join antar dimensi, hitung metrik (`Sales`, `Profit`)
-
----
-
-
 
 ## 📊 Output
 
