@@ -78,7 +78,7 @@ Proyek ini bertujuan membangun pipeline ETL end-to-end untuk mengintegrasikan da
 
 ## 🧰 Tools
 <p align="center">
-  <img src="https://img.icons8.com/?size=256&id=38561&format=png" alt="PDI" width="40">
+  <img src="https://img.icons8.com/?size=256&id=38561&format=png" alt="postgre" width="40">
   <img src="https://www.datageeks.pl/images/Article-images/102-How-to-open-Microsoft-XLSB/pdi.png" alt="Pentaho PDI" width="40" />
   <img src="https://upload.wikimedia.org/wikipedia/commons/c/cf/New_Power_BI_Logo.svg" alt="Power BI" width="40" />
 </p>
