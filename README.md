@@ -1,4 +1,4 @@
-# ETL-Pentaho
+# ETL-dwh-Pentaho
 
 Proyek ini bertujuan membangun pipeline ETL end-to-end untuk mengintegrasikan dan mengolah data penjualan ke dalam bentuk Enterprise Data Warehouse (EDW) berbasis Star Schema. Sistem ini dirancang untuk mendukung analisis bisnis secara efisien melalui pemisahan data ke dalam tabel dimensi dan fakta, serta kompatibel dengan alat analitik seperti Power BI dan Tableau.
 
