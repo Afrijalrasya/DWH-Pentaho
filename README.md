@@ -1,25 +1,25 @@
 # ETL-dwh-Pentaho
 
-Proyek ini bertujuan membangun pipeline ETL end-to-end untuk mengintegrasikan dan mengolah data penjualan ke dalam bentuk Enterprise Data Warehouse (EDW) berbasis Star Schema. Sistem ini dirancang untuk mendukung analisis bisnis secara efisien melalui pemisahan data ke dalam tabel dimensi dan fakta, serta kompatibel dengan alat analitik seperti Power BI dan Tableau.
-
+This project aims to build an end-to-end ETL pipeline to integrate and process sales data into a Star Schema-based Enterprise Data Warehouse (EDW). The system is designed to efficiently support business analytics through the separation of data into dimension tables and facts, and is compatible with analytics tools such as Power BI and Tableau.
 ---
 
-## 🔁 Proses ETL
+## 🔁 ETL Process
 
 ### Staging (Raw Data)
-- **Transformasi:** ORDER_STG, PRODUCTS_STG, CUSTOMERS_STG, VALUES_STG
-- **Tujuan:** Menyimpan data mentah (as-is) dari CSV (Superstore+Sales.csv)
-- **Proses:** Full Load, basic cleaning, truncate & insert
+- **Transformation:** ORDER_STG, PRODUCTS_STG, CUSTOMERS_STG, VALUES_STG
+- **Purpose:** Staging raw data (as-is) from CSV (Superstore+Sales.csv)
+- **Process:** Full Load, basic cleaning, truncate & insert
 
-### Dimensi (Cleaned & Standardized)
-- **Transformasi:** ORDERS_DIM, PRODUCTS_DIM, CUSTOMERS_DIM, DIM_Date
-- **Tujuan:** Menyusun data dimensi terstandarisasi dengan surrogate key
-- **Proses:** Lookup referensi dari VALUES_STG, validasi, enrichment
+### Dimensions (Cleaned & Standardized)
+- Transformation:** ORDERS_DIM, PRODUCTS_DIM, CUSTOMERS_DIM, DIM_Date
+- **Purpose:** Construct standardized dimension data with surrogate keys
+- **Process:** Lookup references from VALUES_STG, validation, enrichment
 
 ### Fact Table 
-- **Transformasi:** PRE_FACT, FACT_TABLE
-- **Tujuan:** Buat fact table siap yang berisi key reference dari table dimensi
-- **Proses:** Join antar dimensi, hitung metrik (`Sales`, `Profit`)
+- Transformation:** PRE_FACT, FACT_TABLE
+- **Purpose:** Create a ready fact table that contains key references from the dimension table
+- **Process:** Join between dimensions, calculate metrics (`Sales`, `Profit`)
+
 
 ---
 
@@ -29,10 +29,11 @@ Proyek ini bertujuan membangun pipeline ETL end-to-end untuk mengintegrasikan da
       ├── 📁 data_source/                
       │   └── Superstore+Sales.csv
       │
-      ├── 📁 docs/                      ← Dokumentasi & diagram visual
+      ├── 📁 docs/                     
       │   ├── process_detail.png
-      │
-      ├── 📁 kettle/                    ← Seluruh file Kettle ETL
+      │   ├── dashboard.png
+      |
+      ├── 📁 kettle/                    ← All Kettlesfiles
       │   ├── 📁 stages/               
       │   │   ├── customer_stg.ktr
       │   │   ├── product_stg.ktr
@@ -45,7 +46,7 @@ Proyek ini bertujuan membangun pipeline ETL end-to-end untuk mengintegrasikan da
       │   │   ├── orders_dim.ktr
       │   │   └── dim_date.ktr
       │   │
-      │   ├── 📁 fact/                 ← Faktualisasi
+      │   ├── 📁 fact/                 ← Factualization process
       │   │   ├── Pre_fact.ktr 
       |   |   ├── fact_table.ktr
       │   │
@@ -59,21 +60,19 @@ Proyek ini bertujuan membangun pipeline ETL end-to-end untuk mengintegrasikan da
 
 ## 📊 Output
 
-- Data sales dengan model Star Schema dan siap untuk proses analisis
-- Terintegrasi dengan cache OLAP (Mondrian, CDA)
-- Siap untuk digunakan untuk visualisasi menggunakan tools seperti:
+- Sales data with Star Schema model and ready for analysis process
+- Integrated with OLAP cache (Mondrian, CDA)
+- Ready to be used for visualization using tools such as:
   - Tableau
   - Power BI
-
 ---
 
-## 🧠 Tujuan Pembelajaran
+## 🧠 Learning Objectives
 
-✅ Memahami alur ETL  
-✅ Membangun mini data warehouse/data mart
-✅ Dokumentasi pipeline untuk portofolio GitHub
-✅ Membangun dashboard visualisasi
-
+✅ Understanding ETL flow 
+✅ Building mini data warehouse/data mart
+✅ Pipeline documentation for GitHub portfolio
+✅ Building visualization dashboard
 ---
 
 ## 🧰 Tools
@@ -87,7 +86,7 @@ Proyek ini bertujuan membangun pipeline ETL end-to-end untuk mengintegrasikan da
 
 ## 🧾 Lisensi
 
-Proyek ini digunakan sebagai pembelajaran. Dataset berasal dari sumber publik dan tidak untuk kepentingan komersial.
+This project is used as a learning tool. Datasets are from public sources and are not for commercial use.
 
 ---
 
