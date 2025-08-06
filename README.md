@@ -1,5 +1,5 @@
 # ETL-dwh-Pentaho
--
+---
 This project aims to build an end-to-end ETL pipeline to integrate and process sales data into a Star Schema-based Enterprise Data Warehouse (EDW). The system is designed to efficiently support business analytics through the separation of data into dimension tables and facts, and is compatible with analytics tools such as Power BI and Tableau.
 ---
 
